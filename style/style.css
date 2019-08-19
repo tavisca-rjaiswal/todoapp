@@ -1,0 +1,74 @@
+.container
+{
+    max-width: 720px;
+    margin: auto;
+    border: 1px solid black;
+}
+.logo
+{
+    max-width: 200px;
+}
+.centerBody
+{
+    display: flex;
+    border: 1px solid black;
+    height: 400px;
+}
+.nav-bar
+{
+    flex-basis: 150px;
+    border: 1px solid black;
+}
+.nav-bar div
+{
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+}
+.renderArea
+{
+    border: 1px solid black;
+    width: 100%;
+}
+.footer
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer div
+{
+    flex-grow: 1;
+    border: 1px solid black;
+    text-align: center;
+}
+.searchBox
+{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+}
+#searchInput
+{
+    width: 200px;
+    margin-right: 20px;
+}
+.todoList
+{
+    display: flex;
+    justify-content: center;    
+}   
+.todoList table tr td:nth-child(2)
+{
+    width: 200px;
+}
+.profile
+{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+.profile *
+{
+    margin: 5px;
+}

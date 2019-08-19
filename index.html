@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo-App</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+        <div class="container">
+        <img src="images/todo.png" alt="" class="logo">
+        <div class="centerBody">
+            <div class="nav-bar">
+                <div id="todo"><p>Todo</p></div>
+                <div id="user"><p>User</p></div>
+                <div id="login"><p>Login</p></div>
+            </div>
+            <div class="renderArea">
+                <div id="todoDisplay">
+                    <div class="searchBox">
+                        <input type="text" id="searchInput">
+                        <button>Add</button>
+                    </div>
+                    <div class="todoList">
+                        <table>
+                            <tr>
+                                <td>1.</td>
+                                <td>asdfg</td>
+                                <td><button>Edit</button></td>
+                                <td><button>X</button></td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td>asdfg</td>
+                                <td><button>Edit</button></td>
+                                <td><button>X</button></td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td>asdfg</td>
+                                <td><button>Edit</button></td>
+                                <td><button>X</button></td>
+                            </tr>                                       
+                        </table>
+                    </div>
+                </div>
+                <div id="userDisplay">
+                    <div class="profile">
+                        <img src="images/user.png" alt="">
+                        <input type="text" value="abcd" readonly>
+                        <input type="text" value="afdsag" readonly>
+                    </div>
+                </div>
+                <div id="loginDisplay">
+                        <div class="profile">
+                                <input type="text" placeholder="User Name">
+                                <input type="text" placeholder="Password">
+                            <button>Login</button>
+                        </div>        
+                </div>
+
+            </div>
+        </div>
+        <div class="footer">
+            <div><p>Home</p></div>
+            <div><p>About Us</p></div>
+            <div><p>Contact</p></div>
+        </div>
+    </div>
+</body>
+<script src="js/render.js"></script>
+</html>
