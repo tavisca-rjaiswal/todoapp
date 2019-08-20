@@ -31,3 +31,41 @@ var DispLogin = () =>
 todo.addEventListener("click",DispTodo);
 user.addEventListener("click",DispUser);
 login.addEventListener("click",DispLogin);
+
+var todoInput=document.getElementById("todoInput");
+var addBtn=document.getElementById("addBtn");
+var todoListTable=document.getElementById("todoListTable");
+var todoList=[];
+
+var addTodo=()=>{
+    var data=todoInput.value;
+    todoList.push(data);
+    todoInput.value="";
+    updateTodoList();
+}
+addBtn.addEventListener("click",addTodo);
+
+var updateTodoList=()=>{
+    var dispTodoList="";
+    todoList.forEach((todo,i)=>{
+        dispTodoList+=`
+        <tr>
+        <td>${i+1}.</td>
+        <td>${todo}</td>
+        <td><input type="image" src="images/edit.png" alt="Submit" onClick="updateTodo(${i})" width="20"></td>
+        <td><input type="image" src="images/delete.png" alt="Submit" onClick="deleteTodo(${i})" width="20"></td>
+        </tr>
+        `;
+    })
+    todoListTable.innerHTML=dispTodoList;
+}
+
+var deleteTodo=(i)=>{
+    todoList.splice(i,1);
+    updateTodoList();
+}
+var updateTodo=(i)=>{
+    var newValue=prompt("Update the Todo",todoList[i]);
+    todoList.splice(i,1,newValue);
+    updateTodoList();
+}

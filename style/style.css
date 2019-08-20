@@ -21,9 +21,13 @@
 }
 .nav-bar div
 {
+    background-color: rgb(160, 213, 42);
     border-bottom: 1px solid black;
-    text-align: center;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
 }
 .renderArea
 {
@@ -48,7 +52,7 @@
     justify-content: center;
     margin: 10px 0 10px 0;
 }
-#searchInput
+#todoInput
 {
     width: 200px;
     margin-right: 20px;
@@ -56,7 +60,9 @@
 .todoList
 {
     display: flex;
-    justify-content: center;    
+    justify-content: center;   
+    max-width: 300px;
+    margin: auto; 
 }   
 .todoList table tr td:nth-child(2)
 {
@@ -67,9 +73,19 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-    width: 200px;
+    justify-content: center;
+    max-width: 400px;
+    height: 300px;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.profile p
+{
+    text-decoration: underline;
+    font-size: 20px;
 }
 .profile *
 {
-    margin: 5px;
+    max-width: 200px;
+    margin: 5px auto;
 }
