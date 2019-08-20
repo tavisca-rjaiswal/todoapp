@@ -11,24 +11,25 @@
 .centerBody
 {
     display: flex;
-    border: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     height: 400px;
 }
 .nav-bar
 {
     flex-basis: 150px;
-    border: 1px solid black;
 }
 .nav-bar div
 {
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     text-align: center;
     cursor: pointer;
 }
 .renderArea
 {
-    border: 1px solid black;
+    border-left: 1px solid black;
     width: 100%;
+    padding-top: 20px;
 }
 .footer
 {

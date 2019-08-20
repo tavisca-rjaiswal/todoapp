@@ -31,5 +31,3 @@ var DispLogin = () =>
 todo.addEventListener("click",DispTodo);
 user.addEventListener("click",DispUser);
 login.addEventListener("click",DispLogin);
-
-DispUser();
