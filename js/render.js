@@ -6,8 +6,14 @@ var todo=document.getElementById("todo");
 var user=document.getElementById("user");
 var login=document.getElementById("login");
 
-userDisplay.style.display="none";
-loginDisplay.style.display="none";
+var todoInput=document.getElementById("todoInput");
+var addBtn=document.getElementById("addBtn");
+var todoListTable=document.getElementById("todoListTable");
+
+(()=>{
+    userDisplay.style.display="none";
+    loginDisplay.style.display="none";
+})();
 
 var DispTodo = () =>
 {
@@ -32,14 +38,11 @@ todo.addEventListener("click",DispTodo);
 user.addEventListener("click",DispUser);
 login.addEventListener("click",DispLogin);
 
-var todoInput=document.getElementById("todoInput");
-var addBtn=document.getElementById("addBtn");
-var todoListTable=document.getElementById("todoListTable");
 var todoList=[];
 
 var addTodo=()=>{
     var data=todoInput.value;
-    todoList.push(data);
+    todoList=[...todoList,data];
     todoInput.value="";
     updateTodoList();
 }
@@ -47,17 +50,40 @@ addBtn.addEventListener("click",addTodo);
 
 var updateTodoList=()=>{
     var dispTodoList="";
-    todoList.forEach((todo,i)=>{
-        dispTodoList+=`
-        <tr>
-        <td>${i+1}.</td>
-        <td>${todo}</td>
-        <td><input type="image" src="images/edit.png" alt="Submit" onClick="updateTodo(${i})" width="20"></td>
-        <td><input type="image" src="images/delete.png" alt="Submit" onClick="deleteTodo(${i})" width="20"></td>
-        </tr>
-        `;
-    })
+    if(todoList.length>0)
+    {
+        dispTodoList=createList(dispTodoList,todoList.length);
+    }
     todoListTable.innerHTML=dispTodoList;
+}
+
+function createList(dispTodoList,i)
+{
+    if(i==1)
+    {
+        return `
+        <div class="todoListTable1">
+            <div>${i}. </div>
+            <div>${todoList[i-1]}</div>
+            <div><input type="image" src="images/edit.png" alt="Submit" onClick="updateTodo(${i-1})" width="20"></div>
+            <div><input type="image" src="images/delete.png" alt="Submit" onClick="deleteTodo(${i-1})" width="20"></div>
+        </div>
+        `;        
+    }
+    else
+    {
+        dispTodoList=createList(dispTodoList,i-1);
+        dispTodoList+=`
+        <div class="todoListTable1">
+            <div>${i}. </div>
+            <div>${todoList[i-1]}</div>
+            <div><input type="image" src="images/edit.png" alt="Submit" onClick="updateTodo(${i-1})" width="20"></div>
+            <div><input type="image" src="images/delete.png" alt="Submit" onClick="deleteTodo(${i-1})" width="20"></div>
+        </div>
+        `;
+        return dispTodoList;
+    }
+    return dispTodoList;
 }
 
 var deleteTodo=(i)=>{
@@ -69,3 +95,4 @@ var updateTodo=(i)=>{
     todoList.splice(i,1,newValue);
     updateTodoList();
 }
+

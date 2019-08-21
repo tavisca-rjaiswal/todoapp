@@ -21,8 +21,9 @@
 }
 .nav-bar div
 {
+    margin: 5px;
     background-color: rgb(160, 213, 42);
-    border-bottom: 1px solid black;
+    border: 1px solid black;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -46,6 +47,11 @@
     border: 1px solid black;
     text-align: center;
 }
+.footer div:hover
+{
+    background-color: rgb(160, 213, 42);
+    cursor: pointer;
+}
 .searchBox
 {
     display: flex;
@@ -64,10 +70,10 @@
     max-width: 300px;
     margin: auto; 
 }   
-.todoList table tr td:nth-child(2)
+/* .todoList table tr td:nth-child(2)
 {
     width: 200px;
-}
+} */
 .profile
 {
     margin: auto;
@@ -88,4 +94,56 @@
 {
     max-width: 200px;
     margin: 5px auto;
+}
+#todoDisplay
+{
+    max-width: 400px;
+    margin: auto;
+    border: 4px solid rgb(160, 213, 42);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    padding: 20px;
+    height: 300px;
+}
+table, tr {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+table
+{
+    border-spacing: 2px;
+}
+#addBtn
+{
+    background-color: rgb(160, 213, 42);
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#todoListTable
+{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.todoListTable1
+{
+    border: 2px solid rgb(160, 213, 42);
+    border-radius: 10px;
+    display: flex;
+    padding: 5px;
+    margin: 5px auto;
+    min-width: 200px;
+}
+.todoListTable1 div:nth-child(2)
+{
+    width: 200px;
 }
