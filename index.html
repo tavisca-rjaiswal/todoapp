@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo-App</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+        <div class="container">
+        <img src="images/todo.png" alt="" class="logo">
+        <div class="centerBody">
+            <div class="nav-bar">
+                <div id="todo">Todo</div>
+                <div id="user">User</div>
+                <div id="login">Login</div>
+            </div>
+            <div class="renderArea">
+                <div id="todoDisplay">
+                    <div class="searchBox">
+                        <input type="text" id="todoInput">
+                        <div id="addBtn">Add</div>
+                    </div>
+                    <div class="lds-dual-ring" id="lds-dual-ring"></div>
+            
+                    <div id="todoListTable">
+                    </div>
+                </div>
+                <div id="userDisplay">
+                    <div class="profile">
+                        <img src="images/user.png" alt="">
+                        <p>abcd</p>
+                        <p>asdfsgfwd</p>
+                    </div>
+                </div>
+                <div id="loginDisplay">
+                        <div class="profile">
+                                <input type="text" placeholder="User Name">
+                                <input type="text" placeholder="Password">
+                            <button>Login</button>
+                        </div>        
+                </div>
+
+            </div>
+        </div>
+        <div class="footer">
+            <div><p>Home</p></div>
+            <div><p>About Us</p></div>
+            <div><p>Contact</p></div>
+        </div>
+    </div>
+</body>
+<script src="js/render.js"></script>
+</html>
