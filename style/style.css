@@ -71,10 +71,6 @@
     max-width: 300px;
     margin: auto; 
 }   
-/* .todoList table tr td:nth-child(2)
-{
-    width: 200px;
-} */
 .profile
 {
     margin: auto;
@@ -98,6 +94,10 @@
 }
 #todoDisplay
 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
     max-width: 400px;
     margin: auto;
     border: 2px solid black;
@@ -148,3 +148,28 @@ table
 {
     width: 200px;
 }
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 46px;
+    height: 46px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    border-color: black transparent black transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

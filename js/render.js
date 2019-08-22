@@ -96,3 +96,11 @@ var updateTodo=(i)=>{
     updateTodoList();
 }
 
+function fetchAll()
+{
+    fetch('https://jsonplaceholder.typicode.com/todos')
+    .then(response => response.json())
+    .then(json => todoList=json.map((item)=>item["title"]))
+    .then(setTimeout(()=>{updateTodoList();document.getElementById("lds-dual-ring").style.display="none"},2000))
+}
+fetchAll();
